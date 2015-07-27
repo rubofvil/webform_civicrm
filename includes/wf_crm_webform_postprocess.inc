@@ -1073,6 +1073,9 @@ class wf_crm_webform_postprocess extends wf_crm_webform_base {
             if ($mem['membership_type_id'] == $params['membership_type_id']) {
               break;
             }
+            else { //If the membership type are different not update, create new one
+              unset($params['id']);
+            }
           }
         }
       }
